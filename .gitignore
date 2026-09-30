@@ -1,0 +1,18 @@
+# 데이터 파일 (개인정보 형태 데이터 포함, 용량 초과)
+01_raw/
+03_cleaned/
+02_profiling/
+
+# 개인정보가 포함된 리포트
+04_reports/삭제행_*.csv
+04_reports/변경이력_*.csv
+04_reports/적재전_점검결과.txt
+
+# 비교표와 문서는 올린다
+!04_reports/비교표_*.csv
+!04_reports/*.md
+
+# 기타
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
