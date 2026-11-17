@@ -208,7 +208,7 @@ def normalize_alpha(series):
     """비교용 정규화 : 영문자만 남기고 소문자로"""
     return series.fillna("").str.replace(r"[^A-Za-z]", "", regex=True).str.lower()
 
-# 이메일에서 이름 부분 추출 : maria.day697@hotmail.com → maria / day
+# 이메일에서 이름 부분 추출 : maria.day***@hotmail.com → maria / day
 email_local = (df["email"].fillna("").str.split("@").str[0]
                .str.replace(r"\d+$", "", regex=True))
 email_first = email_local.str.split(".").str[0]
@@ -471,7 +471,11 @@ lines.append(f"가입 시점 나이 범위    : "
 lines.append(f"기기 2개 이상 보유 고객 : {(df['device_count']>=2).sum():,}명")
 lines.append("")
 lines.append("[정제 후 이름 샘플 10건]")
-lines.append(df[["first_name", "last_name", "email", "name_flag"]].head(10).to_string(index=False))
+# 로그는 공개 저장소에 올라가므로 성과 이메일은 가린다 (예: Day → D***, maria.day697@ → maria.d***@)
+sample = df[["first_name", "last_name", "email", "name_flag"]].head(10).copy()
+sample["email"] = sample["first_name"].str.lower() + "." + sample["last_name"].str[0].str.lower() + "***@" + sample["email"].str.split("@").str[-1]
+sample["last_name"] = sample["last_name"].str[0] + "***"
+lines.append(sample.to_string(index=False))
 
 with open(os.path.join(REPORT_DIR, "정제로그_crm.txt"), "w", encoding="utf-8-sig") as f:
     f.write("\n".join(lines))

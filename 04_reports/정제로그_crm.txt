@@ -72,13 +72,13 @@ customer_id 중복      : 0건  ← 0이어야 정상
 
 [정제 후 이름 샘플 10건]
 first_name last_name                         email name_flag
-     Maria       Day      maria.day697@hotmail.com      None
-     Kevin     Cantu      kevin.cantu968@gmail.com      None
-    Ronald    Daniel    ronald.daniel138@yahoo.com      None
- Katherine     Smith  katherine.smith357@yahoo.com      None
-   Brandon    Glover brandon.glover804@hotmail.com      None
-      Toni        Li          toni.li092@gmail.com      None
-   Barbara      Luna     barbara.luna614@yahoo.com      None
-   Richard    Benson   richard.benson220@yahoo.com      None
-     James       Ali        james.ali627@yahoo.com      None
-       Jay     Jones        jay.jones624@yahoo.com      None
+     Maria      D***        maria.d***@hotmail.com      None
+     Kevin      C***          kevin.c***@gmail.com      None
+    Ronald      D***         ronald.d***@yahoo.com      None
+ Katherine      S***      katherine.s***@yahoo.com      None
+   Brandon      G***      brandon.g***@hotmail.com      None
+      Toni      L***           toni.l***@gmail.com      None
+   Barbara      L***        barbara.l***@yahoo.com      None
+   Richard      B***        richard.b***@yahoo.com      None
+     James      A***          james.a***@yahoo.com      None
+       Jay      J***            jay.j***@yahoo.com      None

@@ -4,8 +4,6 @@
 > PostgreSQL 관계형 데이터베이스로 구축한 프로젝트.
 >
 > **이 저장소는 정제·검증·적재까지를 다룬다.**
-> > 구축된 DB를 활용한 비즈니스 분석은 별도 저장소에서 진행한다.
-> → [이커머스 데이터 SQL 분석](https://github.com/bookii964/project2_ecommerce_sql_analysis)
 >
 > **사용 도구** : Python(pandas) · PostgreSQL · DBeaver · VSCode
 > **작업 규모** : 원본 5개 파일(93만 행) → 정제 스크립트 22개 → 검증 항목 160여 개 → DB 테이블 6개
@@ -212,7 +210,7 @@ SELECT customer_id, first_name_raw, first_name
 | 주체 | 방식 | 결과 |
 |---|---|---|
 | Python (5단계) | 규칙별 검사 함수 | 파일별 13~39개 항목, **전체 합격** |
-| PostgreSQL (6단계) | 제약조건 65개 | 제약 활성 상태에서 **93만 행 무결점 적재** |
+| PostgreSQL (6단계) | 제약조건 67개 | 제약 활성 상태에서 **93만 행 무결점 적재** |
 
 DB 적재는 두 번째 검증 장치다. `CHECK (category IN (...))` 처럼 2단계 규칙서의 내용을 DB에 다시 선언했기 때문에, **적재 성공 자체가 정제 품질의 증거**가 된다.
 

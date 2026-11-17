@@ -184,7 +184,7 @@ def normalize_alpha(series):
     """영문자만 남기고 소문자로 — 비교용 정규화"""
     return series.fillna("").str.replace(r"[^A-Za-z]", "", regex=True).str.lower()
 
-# 이메일에서 이름 부분 추출 : maria.day697@hotmail.com → maria / day
+# 이메일에서 이름 부분 추출 : maria.day***@hotmail.com → maria / day
 email_local = email.str.split("@").str[0].str.replace(r"\d+$", "", regex=True)
 email_first = email_local.str.split(".").str[0]
 email_last = email_local.str.split(".").str[-1]

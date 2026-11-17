@@ -16,3 +16,11 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+# ── 2026-11-17 추가: 안전장치 ──
+backups/
+logs/
+*.dump
+*.backup
+.pgpass
+pgpass.conf
+.env

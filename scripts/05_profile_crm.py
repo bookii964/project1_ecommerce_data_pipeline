@@ -304,7 +304,7 @@ lines.append(f"  이메일과 이름이 일치         : {match.sum():,}건 ({ma
 lines.append(f"  이메일과 이름이 불일치       : {(has_email & ~match).sum():,}건")
 lines.append("")
 lines.append("  ※ 이메일이 'firstname.lastname숫자@도메인' 형식이므로 이름과 대조가 가능하다.")
-lines.append("     'KKeevvin Cantu' 의 이메일이 kevin.cantu968@gmail.com 이라는 점은,")
+lines.append("     'KKeevvin Cantu' 의 이메일이 kevin.cantu***@gmail.com 이라는 점은,")
 lines.append("     이메일을 이름 복원의 참고자료로 쓸 수 있다는 뜻이다.")
 lines.append("     단, 불일치 건 중에는 아래 3가지가 섞여 있어 구분이 필요하다:")
 lines.append("       ① 이름이 오염된 경우      → 이메일로 복원 가능")
